@@ -1,1 +1,1 @@
-# dailymarrow
+read instructions.txt as how to run and test this repo

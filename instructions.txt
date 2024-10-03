@@ -1,0 +1,125 @@
+after cloning the repo, do the following
+
+run the command  --     python manage.py migrate
+run the command --     python manage.py runserver
+
+
+go to postman and run the following url using GET method http://localhost:8000/movie/test  , the output should be it is working...
+
+
+run the following url using POST method : http://localhost:8000/movie/upload_data  
+input format : in the body section select form data and add a csv file in the format given in the problem statement, the name of the file field should be input.csv , click run
+output format : if the request is success it will return status 200 and the following output 
+{
+    "message": "data successfully uploaded"
+}
+if it is a failed request it will return status of 500 with the following
+{
+    "message" : "Error in uploading data" 
+}
+the errors can be viewed in terminal
+
+
+run the following url using GET method :  http://localhost:8000/movie/view_data?year_of_release=1991&language=en&records_perpage=5&page_number=2
+feel free to tweak the parameters of the request or disable some parameters
+
+output format : 
+
+{
+    "data": [
+        {
+            "id": 144535,
+            "budget": 30000000.0,
+            "homepage": "",
+            "original_language_code": "en",
+            "original_title": "The Prince of Tides",
+            "overview": "A troubled man talks to his suicidal sister's psychiatrist about their family history and falls in love with her in the process.",
+            "release_date": "1991-12-25",
+            "revenue": 74787599.0,
+            "runtime": 132.0,
+            "status": "Released",
+            "title": "The Prince of Tides",
+            "rating": 5.9,
+            "vote_count": 57,
+            "production_company_id": 5,
+            "genre_id": 18,
+            "languages": "['English']"
+        },
+        {
+            "id": 151312,
+            "budget": 0.0,
+            "homepage": "",
+            "original_language_code": "en",
+            "original_title": "The Inner Circle",
+            "overview": "The true story of Ivan Sanchin, the KGB officer who was Stalin's private film projectionist from 1939 until the dictator's death. Told from Sanchin's view, the sympathetic but tragically flawed hero maintains unwavering faith in his \"Master\" despite the arrest of his neighbors and his involvement with their daughter, his wife's affair with the chilling State Security chief Lavrentii Beria and her tragic decline, and the deadly political machinations within the Kremlin he witnesses firsthand. Written by Martin H. Booda",
+            "release_date": "1991-12-25",
+            "revenue": 0.0,
+            "runtime": 137.0,
+            "status": "Released",
+            "title": "The Inner Circle",
+            "rating": 4.9,
+            "vote_count": 7,
+            "production_company_id": 5,
+            "genre_id": 18,
+            "languages": "['English']"
+        },
+        {
+            "id": 148762,
+            "budget": 0.0,
+            "homepage": "",
+            "original_language_code": "en",
+            "original_title": "Rush",
+            "overview": "Undercover cop Jim Raynor (Jason Patric) is a seasoned veteran. His partner, Kristen Cates (Jennifer Jason Leigh), is lacking in experience, but he thinks she's tough enough to work his next case with him: a deep cover assignment to bring down the notoriously hard-to-capture drug lord Gaines (Gregg Allman). While their relationship turns romantic during the assignment, they also turn into junkies, and will have to battle their own addictions if they want to bring down Gaines once and for all.",
+            "release_date": "1991-12-22",
+            "revenue": 0.0,
+            "runtime": 120.0,
+            "status": "Released",
+            "title": "Rush",
+            "rating": 6.9,
+            "vote_count": 43,
+            "production_company_id": 80,
+            "genre_id": 80,
+            "languages": "['English']"
+        },
+        {
+            "id": 144395,
+            "budget": 40000000.0,
+            "homepage": "",
+            "original_language_code": "en",
+            "original_title": "JFK",
+            "overview": "New Orleans District Attorney Jim Garrison discovers there's more to the Kennedy assassination than the official story.",
+            "release_date": "1991-12-20",
+            "revenue": 205405498.0,
+            "runtime": 189.0,
+            "status": "Released",
+            "title": "JFK",
+            "rating": 7.5,
+            "vote_count": 513,
+            "production_company_id": 523,
+            "genre_id": 18,
+            "languages": "['English', 'Español']"
+        },
+        {
+            "id": 147918,
+            "budget": 0.0,
+            "homepage": "",
+            "original_language_code": "en",
+            "original_title": "Father of the Bride",
+            "overview": "George Banks is an ordinary, middle-class man whose 21 year-old daughter Annie has decided to marry a man from an upper-class family, but George can't think of what life would be like without his daughter. He becomes slightly insane, but his wife tries to make him happy for Annie, but when the wedding takes place at their home and a foreign wedding planner takes over the ceremony.",
+            "release_date": "1991-12-20",
+            "revenue": 89325780.0,
+            "runtime": 105.0,
+            "status": "Released",
+            "title": "Father of the Bride",
+            "rating": 6.2,
+            "vote_count": 355,
+            "production_company_id": 5842,
+            "genre_id": 35,
+            "languages": "['English', 'Italiano', 'Português']"
+        }
+    ]
+}
+
+
+
+that is all
